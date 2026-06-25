@@ -54,17 +54,27 @@ model_bundle/
   "model_name": "qsentia-finance-ranker",
   "model_version": "0.1.0",
   "adapter": {
-    "type": "custom",
-    "module": "model_adapter",
-    "class": "ModelAdapter"
+    "type": "pytorch"
+  },
+  "model": {
+    "module": "model_architecture",
+    "class": "RankerModel",
+    "kwargs": {
+      "num_features": 2
+    }
   },
   "artifacts": {
-    "pytorch_model": "artifacts/pytorch_model.pt"
+    "pytorch_state_dict": "artifacts/pytorch_model.pt"
   },
   "feature_columns": ["momentum_20d", "volatility_20d"],
   "python_version": "3.11"
 }
 ```
+
+For PyTorch bundles, prefer providing architecture code plus a state dict. The
+built-in PyTorch adapter instantiates the configured class, calls
+`load_state_dict(...)`, moves the model to the target device, and calls
+`model.eval()` before serving.
 
 ## Local Run
 
@@ -134,4 +144,3 @@ The research team must provide model files plus the serving logic around them:
 9. manifest.json
 10. model version
 ```
-
