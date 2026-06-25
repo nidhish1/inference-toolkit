@@ -67,3 +67,33 @@ Then add:
 Upload `manifest.json` last so the S3/EventBridge registration pipeline only
 runs after the bundle is fully uploaded.
 
+## Docker
+
+This boilerplate includes a Dockerfile for the reusable serving image.
+
+Build from repo root:
+
+```bash
+docker build \
+  -f serving-bundle-boilerplate/Dockerfile \
+  -t qsentia-serving:latest \
+  .
+```
+
+Run with this bundle mounted:
+
+```bash
+docker run --rm \
+  -p 8080:8080 \
+  -e MODEL_BUNDLE_PATH=/models/model_bundle \
+  -v "$PWD/serving-bundle-boilerplate:/models/model_bundle:ro" \
+  qsentia-serving:latest
+```
+
+Or from this folder:
+
+```bash
+docker compose up --build
+```
+
+The Docker image is reusable. The model bundle is mounted at runtime.

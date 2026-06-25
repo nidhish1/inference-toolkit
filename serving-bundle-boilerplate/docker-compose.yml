@@ -1,0 +1,13 @@
+services:
+  qsentia-serving:
+    build:
+      context: ..
+      dockerfile: serving-bundle-boilerplate/Dockerfile
+    image: qsentia-serving:latest
+    ports:
+      - "8080:8080"
+    environment:
+      MODEL_BUNDLE_PATH: /models/model_bundle
+    volumes:
+      - ./:/models/model_bundle:ro
+
