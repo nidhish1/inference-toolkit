@@ -1,0 +1,7 @@
+{
+  "prediction_horizon": "1d",
+  "asset": "BTC",
+  "default_signal": "hold",
+  "default_target_position": 0.0
+}
+

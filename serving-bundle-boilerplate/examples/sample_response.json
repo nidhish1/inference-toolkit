@@ -1,0 +1,9 @@
+{
+  "as_of_date": "2026-06-25",
+  "signal": "hold",
+  "target_position": 0.0,
+  "confidence": 0.0,
+  "model_name": "example-model",
+  "model_version": "v1"
+}
+

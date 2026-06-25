@@ -1,0 +1,19 @@
+{
+  "model_name": "example-model",
+  "model_version": "v1",
+  "framework": "custom",
+  "description": "Serving bundle boilerplate",
+  "adapter": {
+    "type": "custom",
+    "module": "model_adapter",
+    "class": "ModelAdapter"
+  },
+  "artifacts": {},
+  "config": "config/config.json",
+  "input_schema": "schemas/input_schema.json",
+  "output_schema": "schemas/output_schema.json",
+  "env": "staging",
+  "status": "inactive",
+  "endpoint_url": ""
+}
+

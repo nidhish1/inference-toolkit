@@ -1,0 +1,17 @@
+{
+  "as_of_date": "2026-06-25",
+  "ohlcv": [
+    {
+      "date": "2026-06-24T00:00:00Z",
+      "open": 100000.0,
+      "high": 101000.0,
+      "low": 99000.0,
+      "close": 100500.0,
+      "volume": 123456.0
+    }
+  ],
+  "texts": [
+    "Bitcoin market sentiment improved today."
+  ]
+}
+

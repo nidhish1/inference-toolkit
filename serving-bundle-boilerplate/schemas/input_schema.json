@@ -1,0 +1,54 @@
+{
+  "type": "object",
+  "required": [
+    "as_of_date",
+    "ohlcv"
+  ],
+  "properties": {
+    "as_of_date": {
+      "type": "string",
+      "description": "Prediction date."
+    },
+    "ohlcv": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "date",
+          "open",
+          "high",
+          "low",
+          "close",
+          "volume"
+        ],
+        "properties": {
+          "date": {
+            "type": "string"
+          },
+          "open": {
+            "type": "number"
+          },
+          "high": {
+            "type": "number"
+          },
+          "low": {
+            "type": "number"
+          },
+          "close": {
+            "type": "number"
+          },
+          "volume": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "texts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
+

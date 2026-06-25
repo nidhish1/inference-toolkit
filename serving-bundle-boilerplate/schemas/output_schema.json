@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "required": [
+    "signal",
+    "target_position",
+    "confidence"
+  ],
+  "properties": {
+    "as_of_date": {
+      "type": "string"
+    },
+    "signal": {
+      "type": "string",
+      "enum": [
+        "long",
+        "short",
+        "hold"
+      ]
+    },
+    "target_position": {
+      "type": "number"
+    },
+    "confidence": {
+      "type": "number"
+    },
+    "model_name": {
+      "type": "string"
+    },
+    "model_version": {
+      "type": "string"
+    }
+  }
+}
+
