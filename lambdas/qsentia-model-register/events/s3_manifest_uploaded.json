@@ -1,0 +1,22 @@
+{
+  "version": "0",
+  "id": "test-event",
+  "detail-type": "Object Created",
+  "source": "aws.s3",
+  "account": "123456789012",
+  "time": "2026-06-25T00:00:00Z",
+  "region": "us-east-2",
+  "resources": [
+    "arn:aws:s3:::qsentia-model-artifacts"
+  ],
+  "detail": {
+    "bucket": {
+      "name": "qsentia-model-artifacts"
+    },
+    "object": {
+      "key": "models/btc-hybrid-ensemble/versions/20260524_125657_utc/manifest.json",
+      "size": 1024
+    }
+  }
+}
+
