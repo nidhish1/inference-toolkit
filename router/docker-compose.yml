@@ -1,0 +1,14 @@
+services:
+  qsentia-router:
+    build:
+      context: .
+    image: qsentia-router:latest
+    ports:
+      - "8090:8090"
+    environment:
+      AWS_REGION: ${AWS_REGION:-us-east-1}
+      MODEL_REGISTRY_TABLE: ${MODEL_REGISTRY_TABLE:-qsentia-model-registry}
+      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
+      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
+      AWS_SESSION_TOKEN: ${AWS_SESSION_TOKEN:-}
+
