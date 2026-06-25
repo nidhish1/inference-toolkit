@@ -1,0 +1,16 @@
+{
+  "model_name": "qsentia-sample-ranker",
+  "model_version": "0.1.0",
+  "adapter": {
+    "type": "custom",
+    "module": "model_adapter",
+    "class": "ModelAdapter"
+  },
+  "artifacts": {},
+  "feature_columns": [
+    "momentum_20d",
+    "volatility_20d"
+  ],
+  "python_version": "3.11"
+}
+

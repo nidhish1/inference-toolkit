@@ -1,0 +1,40 @@
+{
+  "type": "object",
+  "required": [
+    "as_of_date"
+  ],
+  "properties": {
+    "as_of_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "universe": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "positions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "symbol",
+          "weight"
+        ],
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "weight": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "market_data": {
+      "type": "object"
+    }
+  }
+}
+
