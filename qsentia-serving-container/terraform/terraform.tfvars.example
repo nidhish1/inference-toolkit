@@ -1,0 +1,21 @@
+aws_region  = "us-east-1"
+environment = "dev"
+
+# CPU mode, default.
+launch_mode = "fargate"
+
+# GPU mode.
+# launch_mode          = "gpu_ec2"
+# gpu_instance_types   = ["g5.xlarge"]
+# gpu_desired_capacity = 1
+
+desired_count = 1
+task_cpu      = 1024
+task_memory   = 2048
+
+model_artifact_prefix = "model_bundle/"
+
+# Set after pushing the runtime image to ECR, or leave empty to use :latest
+# from the repository this stack creates.
+container_image = ""
+
